@@ -20,4 +20,9 @@ func main(m testing.T) {
 		m.Fail()
 	}
 
+	//test bytes
+	data := Bytes("hello world")
+	if data == nil {
+		m.Fail()
+	}
 }
