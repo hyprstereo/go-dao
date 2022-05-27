@@ -6,7 +6,7 @@ import (
 	"math"
 	"strconv"
 
-	"github.com/hyprstereo/go-dao/internal/encoding/json"
+	"github.com/hyprstereo/go-dao/encoding/json"
 )
 
 func Encode(v any, pretty ...bool) (r json.RawValue) {

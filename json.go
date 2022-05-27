@@ -1,6 +1,6 @@
 package godao
 
-import "github.com/hyprstereo/go-dao/pkg/encoding/json"
+import "github.com/hyprstereo/go-dao/encoding/json"
 
 func JsonEncode(v any, pretty ...bool) (data []byte) {
 	return json.Encode(v, pretty...)

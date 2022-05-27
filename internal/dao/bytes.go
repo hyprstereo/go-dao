@@ -11,7 +11,7 @@ import (
 	"reflect"
 
 	"github.com/hyprstereo/go-dao/encoding/json"
-	"github.com/hyprstereo/go-dao/internal/utils"
+	"github.com/hyprstereo/go-dao/utils"
 
 	"github.com/vmihailenco/msgpack/v5"
 )

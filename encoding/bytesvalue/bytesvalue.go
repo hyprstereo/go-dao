@@ -6,9 +6,9 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/hyprstereo/go-dao/internal/encoding/json"
-	"github.com/hyprstereo/go-dao/internal/encoding/msg"
-	"github.com/hyprstereo/go-dao/internal/utils"
+	"github.com/hyprstereo/go-dao/encoding/json"
+	"github.com/hyprstereo/go-dao/encoding/msg"
+	"github.com/hyprstereo/go-dao/utils"
 )
 
 type EncoderType uint8

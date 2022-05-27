@@ -8,7 +8,7 @@ import (
 
 	"github.com/hyprstereo/go-dao/internal/formatter/term"
 	"github.com/hyprstereo/go-dao/internal/template/ft"
-	"github.com/hyprstereo/go-dao/internal/utils"
+	"github.com/hyprstereo/go-dao/utils"
 
 	"github.com/tidwall/gjson"
 	"github.com/tidwall/sjson"
