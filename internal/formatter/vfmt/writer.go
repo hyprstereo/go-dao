@@ -10,7 +10,7 @@ import (
 	"github.com/chzyer/readline"
 	"github.com/hyprstereo/go-dao/internal/formatter/term"
 	"github.com/hyprstereo/go-dao/internal/template/ft"
-	"github.com/hyprstereo/go-dao/internal/utils"
+	"github.com/hyprstereo/go-dao/utils"
 )
 
 func NewWriter(format string, t ...string) *Writer {
