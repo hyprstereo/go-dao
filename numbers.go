@@ -1,6 +1,6 @@
 package godao
 
-import "github.com/hyprstereo/go-dao/internal/encoding/bytesvalue"
+import "github.com/hyprstereo/go-dao/encoding/bytesvalue"
 
 type Int = bytesvalue.Int
 type Float = bytesvalue.Float

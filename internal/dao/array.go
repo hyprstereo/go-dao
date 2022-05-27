@@ -7,7 +7,7 @@ import (
 	"reflect"
 	"sort"
 
-	"github.com/hyprstereo/go-dao/internal/encoding/json"
+	"github.com/hyprstereo/go-dao/encoding/json"
 )
 
 type Arr[T string | any] struct {

@@ -1,8 +1,8 @@
 package godao
 
 import (
-	"github.com/hyprstereo/go-dao/internal/encoding/json"
-	"github.com/hyprstereo/go-dao/internal/encoding/msg"
+	"github.com/hyprstereo/go-dao/pkg/encoding/json"
+	"github.com/hyprstereo/go-dao/pkg/encoding/msg"
 )
 
 type RawValue = json.RawValue

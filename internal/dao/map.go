@@ -11,8 +11,8 @@ import (
 
 	"github.com/tidwall/gjson"
 
-	"github.com/hyprstereo/go-dao/internal/encoding/hjson"
-	"github.com/hyprstereo/go-dao/internal/encoding/json"
+	"github.com/hyprstereo/go-dao/encoding/hjson"
+	"github.com/hyprstereo/go-dao/encoding/json"
 	"github.com/hyprstereo/go-dao/internal/utils"
 
 	"github.com/tidwall/sjson"
