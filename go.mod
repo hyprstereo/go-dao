@@ -13,7 +13,7 @@ require (
 
 require (
 	github.com/chzyer/readline v1.5.0
-	github.com/goccy/go-json v0.9.7 // indirect
+	github.com/goccy/go-json v0.9.7
 	github.com/tidwall/gjson v1.14.1
 	github.com/tidwall/sjson v1.2.4
 	github.com/valyala/bytebufferpool v1.0.0
