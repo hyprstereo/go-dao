@@ -8,9 +8,9 @@ import (
 	"sync"
 
 	"github.com/chzyer/readline"
-	"github.com/hyprstereo/go-dao/internal/formatter/term"
-	"github.com/hyprstereo/go-dao/internal/template/ft"
 	"github.com/hyprstereo/go-dao/utils"
+	"github.com/hyprstereo/go-dao/utils/formatter/term"
+	"github.com/hyprstereo/go-dao/utils/template/ft"
 )
 
 func NewWriter(format string, t ...string) *Writer {

@@ -7,7 +7,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/hyprstereo/go-dao/internal/template/ft"
+	"github.com/hyprstereo/go-dao/utils/template/ft"
 )
 
 var (

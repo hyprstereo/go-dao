@@ -4,7 +4,7 @@ import (
 	"bytes"
 	"io"
 
-	"github.com/hyprstereo/go-dao/internal/formatter/term"
+	"github.com/hyprstereo/go-dao/utils/formatter/term"
 )
 
 // Rainbow prints all the colors of the rainbow! All 232 of them colors!

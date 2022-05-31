@@ -2,7 +2,10 @@ module github.com/hyprstereo/go-dao
 
 go 1.18
 
-require github.com/spf13/afero v1.8.2
+require (
+	github.com/iancoleman/strcase v0.2.0
+	github.com/spf13/afero v1.8.2
+)
 
 require (
 	github.com/tidwall/match v1.1.1 // indirect

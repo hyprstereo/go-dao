@@ -589,6 +589,12 @@ func (m Map) Decode(key string, dst any) (err error) {
 	return
 }
 
+const (
+	FieldNameCamel uint8 = iota
+	FieldNameSnake
+	FieldNameKebab
+)
+
 func MapKeys[K comparable, V any](m map[K]V) (s []K) {
 	s = make([]K, 0)
 	for k, _ := range m {

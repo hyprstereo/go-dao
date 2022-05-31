@@ -7,8 +7,8 @@ import (
 	"io"
 	"strings"
 
-	"github.com/hyprstereo/go-dao/internal/dao"
-	"github.com/hyprstereo/go-dao/internal/template/ft"
+	"github.com/hyprstereo/go-dao/dao"
+	"github.com/hyprstereo/go-dao/utils/template/ft"
 )
 
 type FuncMaps = dao.Map

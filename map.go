@@ -1,6 +1,6 @@
 package godao
 
-import "github.com/hyprstereo/go-dao/internal/dao"
+import "github.com/hyprstereo/go-dao/dao"
 
 type Map = dao.Map
 
