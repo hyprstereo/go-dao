@@ -1,9 +1,10 @@
-package dao
+package godao
 
 import (
 	"reflect"
 	"time"
 
+	"github.com/hyprstereo/go-dao/utils"
 	"github.com/iancoleman/strcase"
 )
 
@@ -30,7 +31,7 @@ func MapToStruct(src Map, tags string) (newStruct reflect.Type) {
 	sFields := []reflect.StructField{}
 	for name, field := range src {
 		st := reflect.StructField{
-			Name: strcase.ToCamel(SafeString(name)),
+			Name: strcase.ToCamel(utils.SafeString(name)),
 			Type: reflect.TypeOf(field),
 			Tag:  reflect.StructTag(`json:"` + strcase.ToLowerCamel(name) + `"`),
 		}

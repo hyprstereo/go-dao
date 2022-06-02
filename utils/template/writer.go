@@ -7,18 +7,19 @@ import (
 	"io"
 	"strings"
 
-	"github.com/hyprstereo/go-dao/dao"
+	godao "github.com/hyprstereo/go-dao"
+
 	"github.com/hyprstereo/go-dao/utils/template/ft"
 )
 
-type FuncMaps = dao.Map
+type FuncMaps = godao.Map
 type Funcs = func(args ...any) (result any, err error)
 
 type Writer struct {
 	*bytes.Buffer
 	linePos   int
 	cursorPos int
-	lines     []dao.BytesValue
+	lines     []godao.Bytes
 	lastSize  int
 }
 
@@ -28,10 +29,10 @@ func (w *Writer) Init(size int) (err error) {
 	return
 }
 
-func (w *Writer) Lines() []dao.BytesValue {
+func (w *Writer) Lines() []godao.Bytes {
 	if len(w.lines) < 1 || w.lastSize != len(w.Bytes()) {
 
-		res := []dao.BytesValue{}
+		res := []godao.Bytes{}
 		rdr := bufio.NewReader(w)
 		isEof := false
 		for !isEof {
@@ -39,7 +40,7 @@ func (w *Writer) Lines() []dao.BytesValue {
 				isEof = true
 				break
 			} else {
-				res = append(res, dao.BytesValue(line))
+				res = append(res, godao.Bytes(line))
 			}
 		}
 		w.lines = res
@@ -49,25 +50,25 @@ func (w *Writer) Lines() []dao.BytesValue {
 }
 
 func (w *Writer) Clear() {
-	w.lines = []dao.BytesValue{}
+	w.lines = []godao.Bytes{}
 	w.Reset()
 	w.cursorPos = 0
 	w.linePos = 0
 }
 
-func (w *Writer) LastLine() dao.BytesValue {
+func (w *Writer) LastLine() godao.Bytes {
 	return w.lines[len(w.lines)-1]
 }
 
-func (w *Writer) ReadLine(lineIndex int) dao.BytesValue {
+func (w *Writer) ReadLine(lineIndex int) godao.Bytes {
 	if lineIndex < len(w.Lines()) {
 		return w.lines[lineIndex]
 	}
 	return nil
 }
 
-func (w *Writer) Output() dao.BytesValue {
-	return dao.BytesValue(w.Bytes())
+func (w *Writer) Output() godao.Bytes {
+	return godao.Bytes(w.Bytes())
 }
 
 func (w *Writer) Render(dst io.Writer, mapData ...FuncMaps) (p int, err error) {

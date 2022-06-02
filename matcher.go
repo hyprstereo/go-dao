@@ -1,22 +1,9 @@
-// Package match provides a simple pattern matcher with unicode support.
-package dao
+package godao
 
 import (
 	"unicode/utf8"
 )
 
-// Match returns true if str matches pattern. This is a very
-// simple wildcard match where '*' matches on any number characters
-// and '?' matches on any one character.
-//
-// pattern:
-// 	{ term }
-// term:
-// 	'*'         matches any sequence of non-Separator characters
-// 	'?'         matches any single non-Separator character
-// 	c           matches character c (c != '*', '?', '\\')
-// 	'\\' c      matches character c
-//
 func Match(str, pattern string) bool {
 	if pattern == "*" {
 		return true
@@ -24,15 +11,6 @@ func Match(str, pattern string) bool {
 	return match(str, pattern, 0, nil, -1) == rMatch
 }
 
-// MatchLimit is the same as Match but will limit the complexity of the match
-// operation. This is to avoid long running matches, specifically to avoid ReDos
-// attacks from arbritary inputs.
-//
-// How it works:
-// The underlying match routine is recursive and may call itself when it
-// encounters a sandwiched wildcard pattern, such as: `user:*:name`.
-// Everytime it calls itself a counter is incremented.
-// The operation is stopped when counter > maxcomp*len(str).
 func MatchLimit(str, pattern string, maxcomp int) (matched, stopped bool) {
 	if pattern == "*" {
 		return true, false
